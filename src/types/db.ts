@@ -13,6 +13,36 @@ export type system_config = {
     version: string;
     jwt_secret: string;
 };
+export type trade_account = {
+    id: Generated<string>;
+    created_at: Generated<string>;
+    cash: number;
+    frozen_cash: Generated<number>;
+    initial_cash: Generated<number>;
+};
+export type trade_order = {
+    id: string;
+    created_at: Generated<string>;
+    symbol: string;
+    sec_name: string;
+    side: string;
+    order_type: string;
+    price: number;
+    volume: number;
+    filled_volume: Generated<number>;
+    filled_vwap: Generated<number>;
+    status: string;
+    reject_reason: string | null;
+};
+export type trade_position = {
+    id: string;
+    created_at: Generated<string>;
+    symbol: string;
+    sec_name: string;
+    volume: number;
+    available_volume: number;
+    vwap: number;
+};
 export type user = {
     id: string;
     created_at: Generated<string>;
@@ -28,6 +58,9 @@ export type user_config = {
 };
 export type DB = {
     system_config: system_config;
+    trade_account: trade_account;
+    trade_order: trade_order;
+    trade_position: trade_position;
     user: user;
     user_config: user_config;
 };

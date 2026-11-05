@@ -44,3 +44,46 @@ model user {
 
   user_config user_config?
 }
+
+// =================================================
+// 股票仿真交易数据模型
+
+// 交易账户
+model trade_account {
+  id         String   @id @default("DEFAULT_ACCOUNT")
+  created_at DateTime @default(now())
+
+  cash         Float // 可用资金
+  frozen_cash  Float @default(0) // 冻结资金
+  initial_cash Float @default(100000) // 初始资金
+}
+
+// 股票持仓
+model trade_position {
+  id         String   @id
+  created_at DateTime @default(now())
+
+  symbol           String @unique // 证券代码，如 SHSE.600000 或 SZSE.000001
+  sec_name         String // 证券名称
+  volume           Int // 总持仓数量
+  available_volume Int // 可用数量
+  vwap             Float // 持仓成本均价
+}
+
+// 委托订单
+model trade_order {
+  id         String   @id // cl_ord_id 委托编号
+  created_at DateTime @default(now())
+
+  symbol        String // 证券代码
+  sec_name      String // 证券名称
+  side          String // 买卖方向: buy | sell
+  order_type    String // 委托类型: limit | market
+  price         Float // 委托价格
+  volume        Int // 委托数量
+  filled_volume Int     @default(0) // 已成交数量
+  filled_vwap   Float   @default(0) // 成交均价
+  status        String // 订单状态: submitted | filled | canceled | rejected
+  reject_reason String? // 拒绝原因
+}
+

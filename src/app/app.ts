@@ -17,6 +17,7 @@ import { interfaceApiList } from '../interface/interface-list'
 import { 报告系统情况任务 } from '../job/instant-job/report-system-status'
 import { databaseBackupCron } from '../job/scheduled-job/database-backup'
 import { onTimeAlarm } from '../job/scheduled-job/on-time-alarm'
+import { 股票兼容接口们 } from '../model/stock/stock-compat-routes'
 
 type 应用状态 = '未启动' | '启动中' | '运行中' | '关闭中' | '已关闭'
 
@@ -52,6 +53,7 @@ class App {
     this.服务 = new 服务器({
       接口们: [
         ...interfaceApiList,
+        ...股票兼容接口们,
         new 接口(
           '/favicon.ico',
           'get',

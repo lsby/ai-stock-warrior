@@ -39,6 +39,15 @@ import _src_interface_project_is_login_index_ts from './project/is-login/index'
 import _src_interface_project_local_login_index_ts from './project/local-login/index'
 import _src_interface_project_login_index_ts from './project/login/index'
 import _src_interface_project_register_index_ts from './project/register/index'
+import _src_interface_project_stock_account_index_ts from './project/stock/account/index'
+import _src_interface_project_stock_bars_index_ts from './project/stock/bars/index'
+import _src_interface_project_stock_health_index_ts from './project/stock/health/index'
+import _src_interface_project_stock_instruments_index_ts from './project/stock/instruments/index'
+import _src_interface_project_stock_order_cancel_index_ts from './project/stock/order-cancel/index'
+import _src_interface_project_stock_order_submit_index_ts from './project/stock/order-submit/index'
+import _src_interface_project_stock_orders_index_ts from './project/stock/orders/index'
+import _src_interface_project_stock_positions_index_ts from './project/stock/positions/index'
+import _src_interface_project_stock_quote_index_ts from './project/stock/quote/index'
 import _src_interface_system_get_enable_registration_index_ts from './system/get-enable-registration/index'
 import _src_interface_system_get_interface_type_index_ts from './system/get-interface-type/index'
 import _src_interface_system_get_system_config_index_ts from './system/get-system-config/index'
@@ -89,6 +98,15 @@ export let interfaceApiList: 任意接口[] = [
   _src_interface_project_local_login_index_ts,
   _src_interface_project_login_index_ts,
   _src_interface_project_register_index_ts,
+  _src_interface_project_stock_account_index_ts,
+  _src_interface_project_stock_bars_index_ts,
+  _src_interface_project_stock_health_index_ts,
+  _src_interface_project_stock_instruments_index_ts,
+  _src_interface_project_stock_order_cancel_index_ts,
+  _src_interface_project_stock_order_submit_index_ts,
+  _src_interface_project_stock_orders_index_ts,
+  _src_interface_project_stock_positions_index_ts,
+  _src_interface_project_stock_quote_index_ts,
   _src_interface_system_get_enable_registration_index_ts,
   _src_interface_system_get_interface_type_index_ts,
   _src_interface_system_get_system_config_index_ts,
