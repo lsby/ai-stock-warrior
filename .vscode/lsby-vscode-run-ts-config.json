@@ -1,6 +1,6 @@
 {
   "env": {
-    "DEBUG": "@lsby:*,@lsby:playground-ts-app:*",
+    "DEBUG": "@lsby:*,@lsby:ai-stock-warrior:*",
     "ENV_FILE_PATH": "./.env/.env.test-web"
   }
 }
